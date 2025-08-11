@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="/bootstrap-icons-1.13.1/bootstrap-icons.css">
+    <style>
+
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar-brand{
+        font-size: 2rem;
+        color: black;
+        font-family: cursive;
+        font-style: italic;
+      }
+      .navbar-brand:hover{
+        color: black;
+      }
+
+      .nav-link {
+        margin-right: 10px;
+        margin-left: 10px;
+        color: black;
+        font-family: sans-serif;
+        text-transform: uppercase;
+      }
+      .nav-link:hover{
+        color: black;
+      }
+.burger {
+  width: 150px;
+  height: 30px;
+}
+      .search {
+        height: 40px;
+        width: 80%;
+        border-radius: 60px;
+        outline: none;
+        margin-right: -35px;
+        font-family: sans-serif;
+        border: 2px solid rgb(248, 26, 92);
+      }
+      .btn0 {
+        height: 40px;
+        width: 40%;
+        outline: none;
+        border: none;
+        background: rgb(248, 26, 92);
+        color: white;
+        border-radius: 60px;
+        font-weight: 700;
+      }
+      .org  {
+        width: 90px;
+        height: 60px;
+        background: transparent;
+      }
+      .main {
+background: url(img/food1.jpg)no-repeat;
+background-size: cover;
+height: 100vh;
+width: 100% ;
+background-position: 50% 50%;
+      }
+      .main h1{
+font-size: 3rem;
+font-weight: 700;
+      }
+      .btn1 {
+        height: 45px;
+        width: 35%;
+        border: none;
+        outline: none;
+        background-color: rgb(248, 26, 92);
+        color: white;
+        font-weight: 700;
+        border-radius: 60px;
+      }
+      .btn1:hover{
+        background-color: rgb(241, 100, 100);
+        transition: 0.5s;
+      }
+      h1{
+        font-weight: 700;
+      }
+      .card:hover {
+        box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+        -webkit-box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: -2px -1px 25px -4px rgba(0, 0, 0, 0.75);
+        transition: 0.5s;
+      }
+      /* APPLE */
+      .apple{ 
+        background: linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)),url(img/eve.jpg)no-repeat;
+        background-size: cover;
+        height: 80vh;
+        width: 100%;
+        font-style: italic;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      }
+      /* IMAGE ZOOM */
+      .image-zoom {
+        position: relative;
+        overflow: hidden;
+      }
+      .image-zoom-wrapper {
+        overflow: hidden;
+        position: relative;
+      }
+      .image-zoom-wrapper img{
+        transition: var(--transition);
+        border: 1px solid rgb(201, 194, 194);
+      }
+      .image-zoom:hover .image-zoom-wrapper img{
+        transform: scale(1.1);
+        border: 1px solid rgb(201, 194, 194);
+      }
+      /* NEWS */
+      .news {
+        background-color: black;
+        color: white;
+      }
+      .btn2 {
+        height: 45px;
+        width: 100px;
+        background: white;
+        margin-left: -10px;
+        border: 2px solid white;
+        font-weight: 600;
+      }
+      .news input{
+        height: 45px;
+        width: 55%;
+        border: 2px solid white;
+        outline: none;
+        background: black;
+        color: white;
+        margin-top: 20px;
+        font-weight: 600;
+      }
+      .news::placeholder{
+        color: white;
+      }
+      .news p{
+        margin: 0;
+      }
+      .bi {
+        font-size: 2.5rem;
+        cursor: pointer;
+        padding-right: 5px;
+      }
+    </style>
+</head>
+<body>
+  <!--NAVIGATION-->
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a href="#" class="navbar-brand"><img class="  img-fluid org" src="img/c.png" alt=""></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll">
+<span class="navbar-toggler-icon"><img src="img/hamburger-burger-svgrepo-com.svg" alt="" class="burger img-fluid w-100"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav m-auto my-2 my-lg-0">
+<li class="nav-item">
+    <a href="#" class="nav-link active">Home</a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link">Trending</a>
+    </li>
+    <li class="nav-item">  
+        <a href="#" class="nav-link" id="navbarScrollingDropdown" role="">store</a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link ">organic</a>
+</li>
+<li class="nav-item">
+    <a href="#" class="nav-link ">contact</a>
+</li>
+            </ul>
+            <form action="#" class="d-flex">
+                <input type="search" class="px-2 search" placeholder="Search" aria-label="Search">
+                <button class="btn0" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<!--MAIN-->
+<section class="main">
+  <div class="container py-5">
+    <div class="row py-5">
+      <div class="col-lg-7 pt-5 text-center">
+<h1 class="pt-5">Nature Has Always Cared For Us!</h1>
+<button class="btn1">More Tips</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--ORGANIC-->
+<div class="new">
+  <div class="container py-5">
+    <div class="row pt-5">
+      <div class="col-lg-7 m-auto">
+        <div class="row text-center">
+          <div class="col-lg-4 image-zoom">
+            <div class="imag image-zoom-wrapper">
+            <img src="img/mango.jpg" alt="" class="img-fluid">
+            <h6>NATURAL</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 image-zoom">
+            <div class="imag image-zoom-wrapper">
+            <img src="img/grape.jpg" alt="" class="img-fluid">
+            <h6>NATURAL</h6>
+            </div>
+          </div>
+          <div class="col-lg-4 image-zoom">
+            <div class="imag image-zoom-wrapper">
+            <img src="img/banana.jpg" alt="" class="img-fluid">
+            <h6>NATURAL</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--PRODUCT-->
+<section class="product">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-lg-5 m-auto text-center">
+        <h1>What's Trending</h1>
+        <h6 style="color: red;">Be Healthy Organic Food</h6>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 theme-shadow image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/chips1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Potato</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/salad1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Salad</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/raisens1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Raisens</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/parfait1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Parfait</h6>
+        <p>$39.99</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 text-center m-auto">
+        <button class="btn1">Click For More</button>
+      </div>
+    </div>
+  </div>
+</section>
+    <!--ABOUT-->
+<section class="about">
+  <div class="container py-5">
+    <div class="row py-5">
+      <div class="col-lg-8 m-auto text-center">
+        <h1>Welcome To Our Organic Food Society</h1>
+<h6 style="color: red;">Be Healthy Organic Food</h6>
+      </div>
+      <div class="row pt-3">
+        <div class="col-lg-4 image-zoom">
+          <div class="customer image-zoom-wrapper">
+          <img src="img/woman1.jpg" alt="" class="img-fluid mb-3">
+          </div>
+          <h5>Best Quality Product</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit beatae impedit fugit consectetur eos!</p>
+        </div>
+        <div class="col-lg-4 image-zoom">
+          <div class="customer image-zoom-wrapper">
+          <img src="img/woman3.jpg" alt="" class="img-fluid mb-3">
+          </div>
+          <h5>Best Quality Product</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit beatae impedit fugit consectetur eos!</p>
+        </div>
+        <div class="col-lg-4 image-zoom">
+          <div class="customer image-zoom-wrapper">
+          <img src="img/woman2.jpg" alt="" class="img-fluid mb-3">
+          </div>
+          <h5>Best Quality Product</h5>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto velit beatae impedit fugit consectetur eos!</p>
+        </div>
+      </div>
+          <div class="row pt-3">
+      <div class="col-lg-6 text-center m-auto">
+        <button class="btn1">Shop More</button>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+<!--SHOP-->
+<div class="shop">
+  <div class="container">
+    <div class="row py-5">
+      <div class="col-lg-8 m-auto text-center">
+        <h1>Explore Our Store</h1>
+        <p style="color: red;">Pick Your Products From Our Store</p>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 theme-shadow image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/chips1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Potato</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/salad1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Salad</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/raisens1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Raisens</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/parfait1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Parfait</h6>
+        <p>$39.99</p>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 theme-shadow image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/lunch1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Potato</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/parfait2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Salad</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/salad2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Raisens</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/parfait3.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Parfait</h6>
+        <p>$39.99</p>
+      </div>
+    </div>
+     <div class="row">
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 theme-shadow image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/salad2.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Potato</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/salad1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Salad</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/raisens1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Raisens</h6>
+        <p>$39.99</p>
+      </div>
+      <div class="col-lg-3 text-center">
+        <div class="card border-0 bg-light mb-2 image-zoom">
+          <div class="card-body image-zoom-wrapper">
+            <img src="img/parfait1.jpg" alt="" class="img-fluid">
+          </div>
+        </div>
+        <h6>Parfait</h6>
+        <p>$39.99</p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--APPLE-->
+<section class="apple py-5">
+  <div class="container text-white py-5">
+    <div class="row py-5">
+      <div class="col-lg-6">
+<h1 class="font-weight-bold py-3">Unlock Your Potential With True Nutritiom</h1>
+<h6 >Be Healthy Organic Food</h6>
+<button class="btn1 mt-3">More From Us</button>
+      </div>
+    </div>
+  </div>
+</section>
+<!--CONTACT US-->
+<section class="contact py-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-5 text-center m-auto">
+        <h1>Contact Us</h1>
+        <h6 style="color: red;">Always Be In Touch With Us</h6>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-lg-9">
+        <div class="row">
+          <div class="col-lg-4">
+            <h6>LOCATION</h6>
+            <p>New York 0911 First Street DC</p>
+            <h6>PHONE</h6>
+            <P>03444-24359555</P>
+            <h6>EMAIL</h6>
+            <p>organicjewel@gmail.com</p>
+          </div>
+          <div class="col-lg-7">
+            <div class="row">
+              <div class="col-lg-6">
+                <input type="text" class="form-control bg-light" placeholder="First Name">
+              </div>
+                            <div class="col-lg-6">
+                <input type="text" class="form-control bg-light" placeholder="Last Name">
+              </div>
+            </div>
+<div class="row">
+  <div class="col lg-12 py-3">
+    <textarea name="" id="" class="form-control bg-light" placeholder="Enter Your Descriptiion" rows="10" cols="5   "></textarea>
+  </div>
+</div>
+<button class="btn1 my-3">Submit</button>
+          </div>  
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="news py-5">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-9 m-auto text-center">
+        <h1>Join Our Secret Society</h1>
+        <input type="text px-3" placeholder="Enter Your Email">
+        <button class="btn2">Submit</button>
+      </div>
+    </div>
+    <div class="row py-5">
+      <div class="col-lg-11">
+<div class="row">
+  <div class="col-lg-3">
+    <h5 class="pb-3">CUSTOMER CARE</h5>
+    <p>Regular</p>
+    <p>On Time</p>
+    <p>Always Care</p>
+  </div>
+  <div class="col-lg-3">
+    <h5 class="pb-3">CUSTOMER CARE</h5>
+    <p>Regular</p>
+    <p>On Time</p>
+    <p>Care</p>
+  </div>
+  <div class="col-lg-3">
+    <h5 class="pb-3">CUSTOMER CARE</h5>
+    <p>Regular</p>
+    <p>On Time</p>
+    <p>Care</p>
+  </div>
+  <div class="col-lg-3">
+    <h5 class="pb-3">CUSTOMER CARE</h5>
+<span><i class="bi bi-facebook text-white mx-1"></i></span>
+<span><i class="bi bi-instagram text-white mx-1"></i></span>
+<span><i class="bi bi-twitter text-white mx-1"></i></span>
+<span><i class="bi bi-google text-white mx-1"></i></span>
+  </div>
+</div>
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">Copyright &copy;2021 All rights reserved | This template is made with by Klali</p>
+  </div>
+</section>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
